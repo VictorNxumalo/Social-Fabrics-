@@ -1,0 +1,12 @@
+# Ignore dependencies and build output
+node_modules/
+dist/
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+*.log
+
+# Env (future)
+.env
+.env.*

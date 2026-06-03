@@ -1,0 +1,176 @@
+[
+  {
+    "id": "look-01",
+    "src": "/gallery/look-01.jpg",
+    "alt": "Social Fabric — Look 01",
+    "caption": "Look 01",
+    "span": "hero",
+    "productIds": [
+      "stars-zip-hoodie",
+      "sf-monogram-cap"
+    ]
+  },
+  {
+    "id": "look-02",
+    "src": "/gallery/look-02.jpg",
+    "alt": "Social Fabric — Look 02",
+    "caption": "Look 02",
+    "span": "default",
+    "productIds": [
+      "youth-zip-hoodie"
+    ]
+  },
+  {
+    "id": "look-03",
+    "src": "/gallery/look-03.jpg",
+    "alt": "Social Fabric — Look 03",
+    "caption": "Look 03",
+    "span": "default",
+    "productIds": [
+      "allergic-tee"
+    ]
+  },
+  {
+    "id": "look-04",
+    "src": "/gallery/look-04.jpg",
+    "alt": "Social Fabric — Look 04",
+    "caption": "Look 04",
+    "span": "tall",
+    "productIds": [
+      "sf-core-hoodie"
+    ]
+  },
+  {
+    "id": "look-05",
+    "src": "/gallery/look-05.jpg",
+    "alt": "Social Fabric — Look 05",
+    "caption": "Look 05",
+    "span": "wide",
+    "productIds": [
+      "liars-graphic-tee",
+      "sf-script-cap"
+    ]
+  },
+  {
+    "id": "look-06",
+    "src": "/gallery/look-06.jpg",
+    "alt": "Social Fabric — Look 06",
+    "caption": "Look 06",
+    "span": "default",
+    "productIds": [
+      "allergic-zip-hoodie"
+    ]
+  },
+  {
+    "id": "look-07",
+    "src": "/gallery/look-07.jpg",
+    "alt": "Social Fabric — Look 07",
+    "caption": "Look 07",
+    "span": "default",
+    "productIds": [
+      "sf-core-tee"
+    ]
+  },
+  {
+    "id": "look-08",
+    "src": "/gallery/look-08.jpg",
+    "alt": "Social Fabric — Look 08",
+    "caption": "Look 08",
+    "span": "tall",
+    "productIds": [
+      "sf-monogram-cap"
+    ]
+  },
+  {
+    "id": "look-09",
+    "src": "/gallery/look-09.jpg",
+    "alt": "Social Fabric — Look 09",
+    "caption": "Look 09",
+    "span": "hero",
+    "productIds": [
+      "stars-zip-hoodie"
+    ]
+  },
+  {
+    "id": "look-10",
+    "src": "/gallery/look-10.jpg",
+    "alt": "Social Fabric — Look 10",
+    "caption": "Look 10",
+    "span": "default",
+    "productIds": [
+      "youth-zip-hoodie",
+      "sf-core-tee"
+    ]
+  },
+  {
+    "id": "look-11",
+    "src": "/gallery/look-11.jpg",
+    "alt": "Social Fabric — Look 11",
+    "caption": "Look 11",
+    "span": "default",
+    "productIds": [
+      "allergic-tee"
+    ]
+  },
+  {
+    "id": "look-12",
+    "src": "/gallery/look-12.jpg",
+    "alt": "Social Fabric — Look 12",
+    "caption": "Look 12",
+    "span": "tall",
+    "productIds": [
+      "sf-core-hoodie"
+    ]
+  },
+  {
+    "id": "look-13",
+    "src": "/gallery/look-13.jpg",
+    "alt": "Social Fabric — Look 13",
+    "caption": "Look 13",
+    "span": "wide",
+    "productIds": [
+      "liars-graphic-tee"
+    ]
+  },
+  {
+    "id": "look-14",
+    "src": "/gallery/look-14.jpg",
+    "alt": "Social Fabric — Look 14",
+    "caption": "Look 14",
+    "span": "default",
+    "productIds": [
+      "sf-script-cap"
+    ]
+  },
+  {
+    "id": "look-15",
+    "src": "/gallery/look-15.jpg",
+    "alt": "Social Fabric — Look 15",
+    "caption": "Look 15",
+    "span": "default",
+    "productIds": [
+      "allergic-zip-hoodie"
+    ]
+  },
+  {
+    "id": "look-16",
+    "src": "/gallery/look-16.jpg",
+    "alt": "Social Fabric — Look 16",
+    "caption": "Look 16",
+    "span": "tall",
+    "productIds": [
+      "sf-core-tee",
+      "sf-monogram-cap"
+    ]
+  },
+  {
+    "id": "look-17",
+    "src": "/gallery/look-17.jpg",
+    "alt": "Social Fabric — Look 17",
+    "caption": "Look 17",
+    "span": "hero",
+    "productIds": [
+      "youth-zip-hoodie"
+    ]
+  }
+]

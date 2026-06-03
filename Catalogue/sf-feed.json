@@ -1,0 +1,35 @@
+{
+  "username": "socialfabric_onlinestore",
+  "location": "Tsakane · East Rand",
+  "stories": [
+    { "id": "story-runway", "label": "Runway", "video": "models-walk.mp4" },
+    { "id": "story-bts", "label": "BTS", "video": "models-walk.mp4" },
+    { "id": "story-brand", "label": "Brand", "video": "header-animation.mp4" },
+    { "id": "story-fabric", "label": "Fabric", "video": "models-walk.mp4" }
+  ],
+  "posts": [
+    {
+      "id": "post-runway-01",
+      "video": "post-1.mp4",
+      "source": "Post 1.mp4",
+      "caption": "Runway pass. The material walks through frame — pause, pass, gone. No retouch.",
+      "likes": 428,
+      "timeAgo": "2d"
+    },
+    {
+      "id": "post-material-02",
+      "video": "models-walk.mp4",
+      "caption": "Generation SF in monochrome textile. East Rand energy, nationwide reach.",
+      "likes": 312,
+      "timeAgo": "4d"
+    },
+    {
+      "id": "post-brand-03",
+      "video": "post-2.mp4",
+      "source": "Post 2.mp4",
+      "caption": "House of Fabric — independence woven into every stitch.",
+      "likes": 891,
+      "timeAgo": "1w"
+    }
+  ]
+}

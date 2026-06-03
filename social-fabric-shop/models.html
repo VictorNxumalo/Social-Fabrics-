@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="description" content="Social Fabric Models — the material. Every look, every stitch, every shift." />
+    <title>Models — Social Fabric</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="site-header"></div>
+
+    <main>
+      <!-- Video runway hero -->
+      <section class="models-video-hero" aria-labelledby="models-heading">
+        <div class="models-video-stage">
+          <video
+            id="models-hero-video"
+            class="models-video-media"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+            aria-label="Model wearing Social Fabric walking across the frame"
+          >
+            <source src="/assets/video/models-walk.mp4" type="video/mp4" />
+          </video>
+
+          <div class="models-video-vignette" aria-hidden="true"></div>
+          <div class="models-video-scanlines sf-fabric-texture" aria-hidden="true"></div>
+          <div class="sf-grain models-video-grain" aria-hidden="true"></div>
+
+          <div class="models-video-overlay" aria-hidden="true">
+            <span class="models-video-corner models-video-corner--tl"></span>
+            <span class="models-video-corner models-video-corner--tr"></span>
+            <span class="models-video-corner models-video-corner--bl"></span>
+            <span class="models-video-corner models-video-corner--br"></span>
+          </div>
+
+          <div class="models-video-badges">
+            <span class="stamp border-sf-white/70 bg-sf-black/45 text-sf-white backdrop-blur-sm">Runway pass</span>
+            <span class="models-video-rec font-mono" aria-hidden="true">
+              <span class="models-video-rec-dot"></span> Material
+            </span>
+          </div>
+
+          <p class="models-video-caption wordmark" aria-hidden="true">004 / Live material</p>
+        </div>
+
+        <div class="models-video-copy section-rule grid md:grid-cols-12" data-reveal-stagger="90">
+          <div class="border-b-2 border-sf-white sf-pad-lg md:col-span-4 md:border-b-0 md:border-r-2" data-reveal="right">
+            <p class="wordmark mb-4 opacity-40">004 / Models</p>
+            <h1 id="models-heading" class="display-large">
+              The<br />material.
+            </h1>
+          </div>
+
+          <div class="flex flex-col justify-center gap-5 sf-pad-lg md:col-span-8" data-reveal="left">
+            <p class="prose-body max-w-xl opacity-75">
+              A model in SF textile — walking through frame, pausing at centre, then passing out.
+              Contextual looks shot raw. No filter. The movement that carries the fabric.
+            </p>
+            <p id="gallery-meta" class="font-mono text-xs uppercase tracking-[0.25em] opacity-50">
+              Loading gallery…
+            </p>
+            <a href="#gallery-grid" class="nav-link inline-flex w-fit">Scroll to looks ↓</a>
+            <a href="#sf-feed" class="nav-link inline-flex w-fit">On the feed ↓</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Marquee -->
+      <div class="marquee-wrap border-t-0" aria-hidden="true">
+        <div class="marquee-track">
+          <span class="marquee-item">The material</span><span class="marquee-sep">///</span>
+          <span class="marquee-item">Shot in monochrome</span><span class="marquee-sep">///</span>
+          <span class="marquee-item">Generation SF</span><span class="marquee-sep">///</span>
+          <span class="marquee-item">No retouch</span><span class="marquee-sep">///</span>
+          <span class="marquee-item">The material</span><span class="marquee-sep">///</span>
+          <span class="marquee-item">Shot in monochrome</span><span class="marquee-sep">///</span>
+          <span class="marquee-item">Generation SF</span><span class="marquee-sep">///</span>
+          <span class="marquee-item">No retouch</span><span class="marquee-sep">///</span>
+        </div>
+      </div>
+
+      <!-- SF Feed — Instagram-style stories + posts -->
+      <div id="sf-feed-root"></div>
+
+      <!-- Gallery grid -->
+      <section class="section-rule" aria-labelledby="gallery-heading">
+        <h2 id="gallery-heading" class="sr-only">Lookbook gallery</h2>
+        <div id="gallery-grid" class="models-grid" data-reveal-stagger="55">
+          <p class="models-empty font-mono text-sm opacity-50">Loading looks…</p>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="grid border-t-2 border-sf-white md:grid-cols-2" data-reveal-stagger="100">
+        <div class="border-b-2 border-sf-white sf-pad md:border-b-0 md:border-r-2" data-reveal="clip">
+          <p class="wordmark mb-4 opacity-40">Wear it</p>
+          <p class="display-section">
+            Seen enough?<br />Get the drop.
+          </p>
+        </div>
+        <div class="flex items-center sf-pad" data-reveal="fade">
+          <a href="/shop.html" class="btn-brutal-filled">Shop the catalog →</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Lightbox -->
+    <div
+      id="gallery-lightbox"
+      class="gallery-lightbox hidden"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Image preview"
+      hidden
+    >
+      <div class="gallery-lightbox-backdrop" data-lightbox-close aria-hidden="true"></div>
+      <div class="gallery-lightbox-panel">
+        <button type="button" class="gallery-lightbox-close" data-lightbox-close aria-label="Close preview">✕</button>
+        <button type="button" class="gallery-lightbox-nav gallery-lightbox-prev" data-lightbox-prev aria-label="Previous image">←</button>
+        <figure class="gallery-lightbox-figure">
+          <img id="lightbox-img" src="" alt="" class="gallery-lightbox-img" />
+          <figcaption id="lightbox-caption" class="gallery-lightbox-caption"></figcaption>
+          <p id="lightbox-counter" class="gallery-lightbox-counter font-mono"></p>
+        </figure>
+        <button type="button" class="gallery-lightbox-nav gallery-lightbox-next" data-lightbox-next aria-label="Next image">→</button>
+      </div>
+    </div>
+
+    <div id="site-footer"></div>
+    <script type="module" src="/src/pages/models.js"></script>
+  </body>
+</html>

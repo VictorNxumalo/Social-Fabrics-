@@ -1,0 +1,22 @@
+{
+  "name": "social-fabric-shop",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "sync:gallery": "node scripts/sync-gallery.mjs",
+    "sync:catalogue": "node scripts/sync-catalogue.mjs",
+    "sync:founder": "node scripts/sync-founder.mjs",
+    "sync:models-video": "node scripts/sync-models-video.mjs",
+    "sync:sf-feed": "node scripts/sync-sf-feed.mjs",
+    "sync": "node scripts/sync-gallery.mjs && node scripts/sync-catalogue.mjs && node scripts/sync-founder.mjs && node scripts/sync-models-video.mjs && node scripts/sync-sf-feed.mjs"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.10",
+    "tailwindcss": "^4.1.10",
+    "vite": "^8.0.12"
+  }
+}

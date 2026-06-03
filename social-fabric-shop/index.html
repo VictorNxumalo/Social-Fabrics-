@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="description" content="Social Fabric — East Rand streetwear by Yxngfrshmadala. Independence, giving back, creative rebellion. Monochrome. Nationwide delivery." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+    <title>Social Fabric — Refuse The Palette</title>
+  </head>
+  <body class="page-home">
+    <div id="home-bg-waves" class="home-bg-waves" aria-hidden="true"></div>
+
+    <div id="site-header"></div>
+
+    <main class="home-main">
+      <!-- Video hero: video shows brand mark; copy lives in solid panel below -->
+      <section class="hero-split" aria-labelledby="hero-heading">
+        <div class="hero-video-stage">
+          <video
+            id="hero-video"
+            class="hero-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+            poster="/assets/images/logo-dark.jpeg"
+            aria-label="Social Fabric brand animation"
+          >
+            <source src="/assets/video/header-animation.mp4" type="video/mp4" />
+          </video>
+
+          <div class="hero-video-scrim-top" aria-hidden="true"></div>
+          <div class="sf-grain absolute inset-0 opacity-[0.04]" aria-hidden="true"></div>
+
+          <p class="hero-video-badge" aria-hidden="true">
+            <span class="stamp border-sf-white/80 bg-sf-black/50 text-sf-white backdrop-blur-sm">East Rand / SA</span>
+          </p>
+        </div>
+
+        <div class="hero-copy-panel">
+          <div class="hero-copy-inner">
+            <div class="hero-copy-main">
+              <h1 id="hero-heading" class="hero-title">
+                Refuse the palette.
+              </h1>
+
+              <p class="hero-desc">
+                A movement for young creatives — independence, giving back, and entrepreneurship
+                woven into every stitch. Black. White. The culture. Nothing extra.
+              </p>
+            </div>
+
+            <div class="hero-copy-actions">
+              <a href="/shop.html" class="btn-brutal-filled w-full justify-center sm:w-auto">Enter the drop</a>
+              <a href="/about.html" class="btn-brutal w-full justify-center border-sf-white text-sf-white sm:w-auto">Read the manifesto</a>
+            </div>
+          </div>
+
+          <div class="hero-copy-footer">
+            <p class="wordmark opacity-40">Social Fabric</p>
+            <p class="font-mono text-[10px] uppercase tracking-[0.3em] opacity-40" data-scroll-cue>Scroll ↓</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Manifesto marquee -->
+      <div id="marquee-slot"></div>
+
+      <!-- Manifesto block -->
+      <section class="section-rule grid md:grid-cols-12" aria-labelledby="manifesto-heading" data-reveal-stagger="90">
+        <div class="border-b-2 border-sf-white sf-pad-lg md:col-span-4 md:border-b-0 md:border-r-2" data-reveal="right">
+          <p class="wordmark mb-4 opacity-40">001 / Manifesto</p>
+          <h2 id="manifesto-heading" class="display-section">
+            Built in Tsakane. Worn nationwide.
+          </h2>
+        </div>
+
+        <div class="space-y-6 sf-pad-lg md:col-span-8" data-reveal="left">
+          <p class="display-large">
+            Fashion told you what to want.<br />
+            <span class="opacity-40">We built a movement instead.</span>
+          </p>
+          <p class="prose-body max-w-xl opacity-70">
+            Founded by Yxngfrshmadala, Social Fabric grew from selling to locals into House of Fabric —
+            events, DJs, artists, and exclusive textile work that reflects South African street culture.
+            Monochrome by design. Rebellious by nature. Delivered to your door.
+          </p>
+          <a href="/about.html" class="btn-brutal border-sf-white text-sf-white">The full story →</a>
+        </div>
+      </section>
+
+      <!-- House of Fabric -->
+      <section class="grid section-rule md:grid-cols-2" aria-labelledby="hof-heading" data-reveal-stagger="90">
+        <div class="border-b-2 border-sf-white bg-sf-white sf-pad-lg text-sf-black md:border-b-0 md:border-r-2" data-reveal="clip">
+          <p class="wordmark mb-4 text-sf-black/40">The culture</p>
+          <h2 id="hof-heading" class="display-large text-sf-black">
+            House of<br />Fabric.
+          </h2>
+        </div>
+        <div class="flex flex-col justify-center gap-5 bg-sf-black sf-pad-lg" data-reveal="up">
+          <p class="prose-body opacity-80">
+            More than drops — Fabric nights bring together DJs, artists, and the community. The collection lives on body
+            and in the room. East Rand energy, nationwide reach.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="/models.html" class="btn-brutal-filled">See the looks</a>
+            <a href="/about.html" class="btn-brutal border-sf-white text-sf-white">The movement →</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Founder -->
+      <section class="section-rule grid md:grid-cols-12" aria-labelledby="founder-teaser-heading" data-reveal-stagger="80">
+        <div class="founder-teaser-visual border-b-2 border-sf-white md:col-span-4 md:border-b-0 md:border-r-2" data-reveal="clip">
+          <a href="/about.html" class="block h-full">
+            <img
+              src="/assets/images/founder/yxngfrshmadala.png"
+              alt="Yxngfrshmadala, founder of Social Fabric"
+              class="h-full w-full object-cover object-center grayscale transition-all duration-500 hover:grayscale-0"
+              width="600"
+              height="800"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+        </div>
+        <div class="flex flex-col justify-center gap-5 sf-pad-lg md:col-span-8" data-reveal="left">
+          <p class="wordmark mb-2 opacity-40">Founder</p>
+          <h2 id="founder-teaser-heading" class="display-section">Yxngfrshmadala</h2>
+          <p class="prose-body opacity-75">
+            Tsakane born. East Rand raised. Built Social Fabric from selling to locals into a movement for independence,
+            giving back, and entrepreneurship.
+          </p>
+          <a href="/about.html" class="nav-link inline-flex w-fit">Read the full story →</a>
+        </div>
+      </section>
+
+      <!-- Featured drops — editorial -->
+      <section class="section-rule bg-sf-black" aria-labelledby="featured-heading">
+        <div class="grid md:grid-cols-12" data-reveal-stagger="80">
+          <div class="flex flex-col justify-between border-b-2 border-sf-white sf-pad md:col-span-3 md:border-b-0 md:border-r-2" data-reveal="up">
+            <div>
+              <p class="wordmark mb-4 opacity-40">002 / Drops</p>
+              <h2 id="featured-heading" class="display-section">
+                New<br />Arms
+              </h2>
+            </div>
+            <a href="/shop.html" class="nav-link mt-10 hidden md:inline-flex">View all →</a>
+          </div>
+
+          <div class="md:col-span-9">
+            <div
+              id="featured-grid"
+              class="featured-scroll flex md:grid md:grid-cols-3 md:overflow-visible"
+              data-reveal-stagger="70"
+            >
+              <p class="sf-pad font-mono text-sm opacity-50">Loading drops…</p>
+            </div>
+            <div class="border-t-2 border-sf-white p-6 md:hidden">
+              <a href="/shop.html" class="btn-brutal w-full border-sf-white text-sf-white">View all drops</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Culture shift CTA -->
+      <section class="grid section-rule md:grid-cols-2" aria-labelledby="shift-heading" data-reveal-stagger="100">
+        <div class="border-b-2 border-sf-white bg-sf-white sf-pad-lg text-sf-black md:border-b-0 md:border-r-2" data-reveal="clip">
+          <p class="wordmark mb-4 text-sf-black/40">003 / Culture</p>
+          <h2 id="shift-heading" class="display-large text-sf-black">
+            Toss the rulebook.<br />Transcend<br />the limits.
+          </h2>
+        </div>
+
+        <div class="flex flex-col justify-center gap-6 bg-sf-black sf-pad-lg" data-reveal="up">
+          <p class="prose-body opacity-80">
+            SF collaborates with artists and designers to craft sustainable swag with a dash of culture —
+            embracing imperfection, experimentation, and innovation. Not just breaking rules. Going beyond them.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="/shop.html" class="btn-brutal-filled">Shop now</a>
+            <a href="/about.html" class="btn-brutal border-sf-white text-sf-white">Our story →</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="site-footer"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
