@@ -1,0 +1,19 @@
+# https://docs.netlify.com/configure-builds/file-based-configuration/
+[build]
+  base = "social-fabric-shop"
+  command = "npm ci && npm run build"
+  publish = "social-fabric-shop/dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Multi-page static site — serve .html pages as-is
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
