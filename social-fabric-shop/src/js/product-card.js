@@ -14,12 +14,12 @@ export function renderProductCard(product, { variant = 'editorial', index = 0 } 
   }
 
   return `
-    <article class="product-card-editorial group min-w-[82vw] max-w-[82vw] shrink-0 snap-center md:min-w-0 md:max-w-none" data-reveal="scale">
+    <article class="product-card-editorial featured-scroll-card group shrink-0 snap-center md:min-w-0 md:max-w-none" data-reveal="scale">
       <div class="relative aspect-[4/5] overflow-hidden bg-sf-black">
         <div class="product-card-image relative h-full w-full">
           <a href="/product.html?id=${product.id}" class="block h-full no-underline text-inherit">
             ${soldOut ? `<span class="stamp absolute left-4 top-4 z-20 bg-sf-black">Sold out</span>` : ''}
-            <span class="pointer-events-none absolute -left-2 top-6 z-10 font-display text-[4rem] font-extrabold leading-none opacity-[0.07] md:text-[5rem]" aria-hidden="true">${num}</span>
+            <span class="product-card-watermark pointer-events-none absolute -left-2 top-6 z-10 font-display font-extrabold leading-none opacity-[0.07]" aria-hidden="true">${num}</span>
             ${renderImg({
               src: product.image,
               alt: product.name,

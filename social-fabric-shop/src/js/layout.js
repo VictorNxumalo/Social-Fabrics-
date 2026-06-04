@@ -1,5 +1,6 @@
 import { getCartCount, initCartBadge } from './cart-store.js'
 import { initMotion } from './motion.js'
+import { initMobileViewport } from './mobile-viewport.js'
 import { SITE } from './site-config.js'
 
 const NAV_LINKS = [
@@ -210,6 +211,7 @@ export function initLayout({ variant = 'solid', activePath = '' } = {}) {
   if (headerEl) headerEl.innerHTML = renderHeader({ variant, activePath })
   if (footerEl) footerEl.innerHTML = renderFooter()
 
+  initMobileViewport()
   initMobileMenu()
   initLogoImages()
   initHeaderScroll()
@@ -224,6 +226,8 @@ function initMobileMenu() {
 
   const closeEls = menu.querySelectorAll('[data-mobile-nav-close]')
 
+  let scrollY = 0
+
   const setOpen = (open) => {
     menu.classList.toggle('is-open', open)
     btn.classList.toggle('is-open', open)
@@ -231,6 +235,14 @@ function initMobileMenu() {
     btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu')
     menu.setAttribute('aria-hidden', String(!open))
     document.body.classList.toggle('nav-open', open)
+
+    if (open) {
+      scrollY = window.scrollY
+      document.body.style.top = `-${scrollY}px`
+    } else {
+      document.body.style.top = ''
+      window.scrollTo(0, scrollY)
+    }
   }
 
   btn.addEventListener('click', () => {
