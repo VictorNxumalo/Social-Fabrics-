@@ -1752,25 +1752,97 @@
 
 /* ——— Mobile optimizations ——— */
 @media (max-width: 767px) {
-  .header-main {
-    @apply gap-2 py-2.5;
-    padding-left: max(1rem, env(safe-area-inset-left, 0px));
-    padding-right: max(1rem, env(safe-area-inset-right, 0px));
+  /* Slim header: hide status rail, sticky (not fixed) so content is not covered */
+  .header-rail {
+    display: none;
   }
 
-  .header-rail-inner {
-    @apply py-1;
-    padding-left: max(1rem, env(safe-area-inset-left, 0px));
-    padding-right: max(1rem, env(safe-area-inset-right, 0px));
+  .header-overlay {
+    position: sticky;
+    top: 0;
+    padding-top: env(safe-area-inset-top);
   }
 
   .site-header {
     @apply max-w-full;
   }
 
+  .header-main {
+    @apply gap-2 py-2;
+    min-height: 0;
+    padding-left: max(0.875rem, env(safe-area-inset-left, 0px));
+    padding-right: max(0.875rem, env(safe-area-inset-right, 0px));
+  }
+
+  .header-overlay .header-main {
+    @apply border-b border-sf-white/25 bg-sf-black/90 py-2 backdrop-blur-md;
+  }
+
+  .header-logo {
+    @apply gap-2;
+  }
+
+  .header-logo-mark {
+    @apply h-8 w-8 text-[10px];
+  }
+
+  .header-logo-sub {
+    @apply hidden;
+  }
+
+  .header-logo-wordmark {
+    @apply text-[11px] tracking-[0.12em];
+  }
+
+  .menu-trigger {
+    @apply h-9 w-9;
+  }
+
+  .nav-cart {
+    @apply min-h-9 min-w-0 px-2 py-1;
+  }
+
+  .nav-cart-label {
+    @apply sr-only;
+  }
+
   .page-home #site-header {
     width: 100%;
     max-width: 100%;
+  }
+
+  /* Display typography — readable on narrow screens */
+  .display-mega,
+  .display-large,
+  .display-section,
+  .hero-title,
+  .sf-monogram {
+    letter-spacing: 0.02em;
+    line-height: 1.18;
+    text-wrap: balance;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .display-mega {
+    font-size: 1.25rem;
+  }
+
+  .display-large {
+    font-size: 1.125rem;
+  }
+
+  .display-section {
+    font-size: 1rem;
+  }
+
+  .section-rule .display-large,
+  .section-rule .display-section {
+    max-width: 18rem;
+  }
+
+  .prose-body {
+    @apply text-[0.875rem] leading-relaxed;
   }
 
   .home-bg-waves,
@@ -1809,18 +1881,6 @@
     max-width: 100%;
   }
 
-  .display-mega {
-    @apply text-[1.65rem] leading-[0.92];
-  }
-
-  .display-large {
-    @apply text-[1.45rem] leading-[0.95];
-  }
-
-  .display-section {
-    @apply text-[1.2rem] leading-[0.96];
-  }
-
   .wordmark {
     @apply text-[10px] tracking-[0.16em];
   }
@@ -1837,27 +1897,57 @@
   }
 
   .models-video-stage {
-    height: clamp(200px, 42svh, 420px);
+    min-height: min(56vw, 380px);
+    height: auto;
+    aspect-ratio: 16 / 10;
   }
 
+  .models-video-stage .models-video-media {
+    object-fit: contain;
+    object-position: center center;
+  }
+
+  .models-video-copy .display-large {
+    font-size: 1.125rem;
+    line-height: 1.2;
+  }
+
+  /* Hero brand animation — full frame, not cropped under nav */
   .hero-video-stage {
-    height: clamp(180px, 32svh, 360px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: min(72vw, 340px);
+    height: auto;
+    aspect-ratio: 4 / 3;
+    background-color: #000;
+  }
+
+  .hero-video-stage .hero-video {
+    position: relative;
+    inset: auto;
+    height: 100%;
+    width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: center center;
+  }
+
+  .hero-video-scrim-top {
+    display: none;
+  }
+
+  .hero-video-stage::after {
+    height: 2.5rem;
+    opacity: 0.85;
+  }
+
+  .hero-video-badge {
+    @apply bottom-3 left-3;
   }
 
   footer .overflow-hidden {
     overflow-x: clip;
-  }
-
-  .header-rail-tag {
-    @apply text-[10px] tracking-[0.18em];
-  }
-
-  .nav-cart {
-    @apply min-h-11 px-2.5;
-  }
-
-  .menu-trigger {
-    @apply h-11 w-11;
   }
 
   .mobile-nav-label {
@@ -1977,15 +2067,24 @@
   }
 
   .hero-title {
-    @apply text-[1.5rem] leading-[0.98] sm:text-3xl;
+    font-size: 1.2rem;
+    line-height: 1.2;
   }
 
   .hero-desc {
-    @apply text-[0.9375rem] leading-relaxed;
+    @apply text-[0.875rem] leading-relaxed;
+  }
+
+  .hero-copy-main {
+    @apply space-y-3;
+  }
+
+  .hero-copy-inner {
+    @apply gap-4 py-5;
   }
 
   .hero-copy-actions {
-    @apply w-full;
+    @apply w-full gap-2;
   }
 
   .hero-copy-actions .btn-brutal,
@@ -2016,16 +2115,24 @@
 }
 
 @media (max-width: 389px) {
+  .display-mega {
+    font-size: 1.1rem;
+  }
+
   .display-large {
-    @apply text-[1.25rem];
+    font-size: 1rem;
   }
 
   .display-section {
-    @apply text-[1.1rem];
+    font-size: 0.9375rem;
   }
 
   .hero-title {
-    @apply text-[1.35rem];
+    font-size: 1.0625rem;
+  }
+
+  .hero-video-stage {
+    min-height: min(68vw, 300px);
   }
 
   .mobile-nav-label {
