@@ -1,0 +1,11 @@
+{
+  "name": "social-fabric",
+  "private": true,
+  "description": "Social Fabric monorepo — shop app lives in social-fabric-shop/",
+  "scripts": {
+    "dev": "npm run dev --prefix social-fabric-shop",
+    "build": "npm run build --prefix social-fabric-shop",
+    "preview": "npm run preview --prefix social-fabric-shop",
+    "install:shop": "npm install --prefix social-fabric-shop"
+  }
+}

@@ -12,12 +12,43 @@ npm run dev
 
 Open the URL Vite prints (usually `http://localhost:5173`).
 
+**Do not use Live Server on the source HTML files.** This app uses Vite to compile Tailwind CSS and bundle JavaScript. Opening `index.html` directly (or via Live Server on `social-fabric-shop/`) shows unstyled HTML because the browser never receives processed CSS.
+
+If you prefer a static preview after building:
+
+```bash
+npm run build
+npm run preview
+```
+
+Or point Live Server at the **`dist/`** folder only (after `npm run build`), not at the project root HTML files.
+
 Build for production:
 
 ```bash
 npm run build
 npm run preview
 ```
+
+## Deploy to Netlify
+
+1. Push the **whole** `Social Fabric` repo to GitHub (or GitLab/Bitbucket).
+2. In [Netlify](https://app.netlify.com): **Add new site** → **Import from Git**.
+3. Netlify reads `netlify.toml` at the repo root automatically:
+   - **Base directory:** `social-fabric-shop` (set in config)
+   - **Build command:** `npm ci && npm run build`
+   - **Publish directory:** `dist`
+4. Deploy. Each build runs asset sync (gallery, catalogue, videos, feed) then Vite.
+
+**Before first deploy, commit large assets** so production has media even if sync paths are missing on CI:
+
+- `social-fabric-shop/public/assets/video/` (`.mp4` files)
+- `social-fabric-shop/public/assets/images/`
+- `social-fabric-shop/public/data/`
+
+Keep source folders in the repo for rebuilds: `Gallery/`, `Assets/`, `Catalogue/`.
+
+**Manual deploy (no Git):** run `npm run build` locally, then drag the `social-fabric-shop/dist` folder into Netlify Drop.
 
 ## Folder structure
 

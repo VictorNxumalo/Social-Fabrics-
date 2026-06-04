@@ -5,6 +5,7 @@ dist/
 # Editor / OS
 .DS_Store
 Thumbs.db
+.vscode/
 *.log
 
 # Env
