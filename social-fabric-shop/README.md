@@ -30,6 +30,14 @@ npm run build
 npm run preview
 ```
 
+## Deploy to Vercel
+
+1. Import the GitHub repo at [vercel.com/new](https://vercel.com/new).
+2. Use the repo root — `vercel.json` configures build and output automatically.
+3. Deploy. Asset sync runs on each build (same as local `npm run build`).
+
+See the [root README](../README.md) for CLI deploy and custom domains.
+
 ## Deploy to Netlify
 
 1. Push the **whole** `Social Fabric` repo to GitHub (or GitLab/Bitbucket).
